@@ -1,0 +1,47 @@
+package proj1;
+
+import java.util.ArrayList;
+
+public class PizzaDemo {
+    public static void main(String[] args) {
+        //pizza1
+        Pizza pizza1 = new Pizza();
+        pizza1.addTopping("cheese");
+        pizza1.addTopping("pepperoni");
+        
+        //toppings for pizza 2
+        ArrayList<String> toppings2 = new ArrayList<>();
+        toppings2.add("cheese");
+        toppings2.add("ham");
+        toppings2.add("onion");
+
+        Pizza pizza2 = new Pizza(CrustType.Butter, toppings2, SizeType.Medium);
+
+        //pizza3
+        ArrayList<String> toppings3 = new ArrayList<>();
+        toppings3.add("cheese");
+        toppings3.add("ham");
+        toppings3.add("onion");
+
+        Pizza pizza3 = new Pizza(CrustType.Butter, toppings3, SizeType.Medium);
+
+        //print pizzas
+        System.out.println("Pizza 1:");
+        System.out.println(pizza1);
+
+        System.out.println("Pizza 2:");
+        System.out.println(pizza2);
+
+        System.out.println("Pizza 3:");
+        System.out.println(pizza3);
+
+        //compare and equal check
+        System.out.println("Does Pizza 2 equal Pizza 3? " + pizza2.equals(pizza3));
+        System.out.println("How does Pizza 1 compare to Pizza 2? " + pizza1.compareTo(pizza2));
+
+      
+    }
+}
+
+
+
